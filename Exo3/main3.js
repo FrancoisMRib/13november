@@ -3,9 +3,14 @@ let nombre2 = parseInt(prompt("Saisir le 2 nombre"));
 
 //afficher dans la console si le produit est négatif
 switch(true){
-    case nombre1*nombre2<0:
-    console.log("Le produit est négatif");
-    break;
-    default:
-    break;
+    case (nombre1<0) && (nombre2>0):
+        console.log("Le produit est négatif");
+        break;
+    case (nombre1>0) && (nombre2<0):
+       console.log("Le produit est négatif");
+        break;
+    case (nombre1<0) && (nombre2<0):
+        break;
+    case (nombre1>0) && (nombre2>0):
+        break;
 }
