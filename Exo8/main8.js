@@ -12,8 +12,8 @@ while(limit<maxVal){
     tab.push(val);
     limit++
 }
-*/
 
+// avec un for
 for (let i = 0 ; i<maxVal ; i++) {
     valeur = prompt("Saisir une valeur");
     tab.push(valeur);
@@ -25,6 +25,28 @@ for (let i = 0 ; i<maxVal ; i++) {
         negatif++;
     }
 }
+*/
+
+// avec un while
+let statut = true;
+while(statut) {
+    let nombre = parseInt(prompt("Saisir un nombre"));
+    tab.push(nombre);
+    if(nombre > 0) {
+        positif++;
+    } else if (nombre == 0) {
+        zero++;
+    } else {
+    negatif++ ;
+}
+//demander d'arréter la boucle de tourner
+    let arret = prompt("Saisir stop pour arréter");
+//condition d'arret de la boucle
+    if(arret == "stop"){
+        statut = false;
+    }
+}
+
 console.log(`Il y a ${positif} valeurs positives`);
 console.log(`Il y a ${zero} zéros`);
 console.log(`Il y a ${negatif} valeurs négatives`);
